@@ -1,22 +1,40 @@
-#featured{
-  img{
+#featured {
+  img {
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
+
   }
+
   /* Card: elemento de referencia para o pseudo-elemento ::before */
-  .card{
-    position: relative; /* ponto de referencia para filhos com position absolute */
-    &::before{
-      content: ""; /* obrigatorio para o pseudo-elemento aparecer */
-      position: absolute; /* flutua por cima da imagem sem ocupar espaco no layout */
-      inset: 0; /* cobre todos os lados do card */
-      top: 50%; /* gradiente comeca apenas na metade de baixo */
-      background: linear-gradient( /* escurece a parte inferior para criar contraste */
-        180deg,
-        transparent 0%,
-        #020617 100%
-      )
+  .card {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    /* ponto de referencia para filhos com position absolute */
+    &::before {
+      content: "";
+      /* obrigatorio para o pseudo-elemento aparecer */
+      position: absolute;
+      /* flutua por cima da imagem sem ocupar espaco no layout */
+      inset: 0;
+      /* cobre todos os lados do card */
+      top: 50%;
+      /* gradiente comeca apenas na metade de baixo */
+      background: linear-gradient(
+          /* escurece a parte inferior para criar contraste */
+          180deg,
+          transparent 0%,
+          #020617 100%)
+    }
+    figcaption{
+      position: absolute;
+      bottom: 0;
+      padding: 24px;
+
+      h2{
+        margin-top: 8px;
+      }
     }
   }
 }
