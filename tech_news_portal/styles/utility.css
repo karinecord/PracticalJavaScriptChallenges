@@ -21,6 +21,10 @@
   gap: 16px;
 }
 
+.gap-32 {
+  gap: 32px;
+}
+
 /* aplica o estilo de h1 definido nas variaveis do :root */
 .text-2xl {
   font: var(--h1);
