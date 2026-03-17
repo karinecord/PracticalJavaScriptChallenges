@@ -56,12 +56,27 @@ main {
 }
 
 .content-tag {
+  /* inline-block: se comporta como texto (fica na mesma linha) mas aceita width/height/padding */
   display: inline-block;
+
+  /* cor de fundo usando a variavel definida no :root */
   background-color: var(--brand-color-dark);
+
+  /* padding: espaco interno. 4px em cima/baixo, 8px nas laterais */
   padding: 4px 8px;
+
+  /* arredonda os cantos do elemento */
   border-radius: 4px;
+
+  /* font: shorthand para peso (500), tamanho (10px), altura de linha (1.2) e familia */
   font: 500 10px/1.2 var(--font-family);
+
+  /* transforma todas as letras em maiusculo */
   text-transform: uppercase;
+
+  /* espacamento entre letras (tracking). em = relativo ao tamanho da fonte */
   letter-spacing: 0.04em;
-  box-shadow:  0px 4px 16px rgba(2, 6, 23, 0.25);
+
+  /* sombra: deslocamento-x deslocamento-y desfoque cor-com-opacidade */
+  box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
 }
