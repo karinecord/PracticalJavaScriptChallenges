@@ -1,38 +1,63 @@
+/* secao de destaques da homepage */
 #featured {
+  /* nesting: estiliza todas as imagens dentro de #featured */
   img {
+    /* faz a imagem ocupar toda a altura do container pai */
     height: 100%;
-    object-fit: cover;
 
+    /* object-fit cover: a imagem preenche o espaco sem distorcer, cortando o excesso */
+    object-fit: cover;
   }
 
   /* Card: elemento de referencia para o pseudo-elemento ::before */
   .card {
+    /* arredonda os cantos do card */
     border-radius: 4px;
+
+    /* overflow hidden: esconde tudo que ultrapassar o border-radius (ex: cantos da imagem) */
     overflow: hidden;
+
+    /* necessario para que o ::before se posicione relativo ao card */
     position: relative;
 
-    /* ponto de referencia para filhos com position absolute */
+    /* ::before: camada invisivel colocada sobre a imagem para criar o efeito de gradiente */
     &::before {
+      /* obrigatorio para o pseudo-elemento aparecer visualmente */
       content: "";
-      /* obrigatorio para o pseudo-elemento aparecer */
-      position: absolute;
+
       /* flutua por cima da imagem sem ocupar espaco no layout */
+      position: absolute;
+
+      /* inset 0: estica o ::before para cobrir todos os lados (top, right, bottom, left = 0) */
       inset: 0;
-      /* cobre todos os lados do card */
+
+      /* sobrepoe o inset: faz o gradiente comecar so na metade inferior do card */
       top: 50%;
-      /* gradiente comeca apenas na metade de baixo */
+
+      /* gradiente de transparente para escuro, cria contraste para texto por cima */
       background: linear-gradient(
-          /* escurece a parte inferior para criar contraste */
           180deg,
           transparent 0%,
           #020617 100%)
     }
-    figcaption{
+
+    /* figcaption: legenda que fica sobre a imagem na parte inferior */
+    figcaption {
+      /* tira do fluxo normal e posiciona relativo ao .card */
       position: absolute;
+
+      /* gruda na parte de baixo do card */
       bottom: 0;
+
+      /* espaco interno para o texto nao ficar colado nas bordas */
       padding: 24px;
 
-      h2{
+      &:has(.text-lg){
+        padding: 12px;
+      }
+
+      h2 {
+        /* espaco entre a tag de categoria e o titulo */
         margin-top: 8px;
       }
     }
