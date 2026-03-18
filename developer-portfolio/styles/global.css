@@ -1,5 +1,48 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --font-asap: "Asap", sans-serif;
+  --font-inconsolata: "Inconsolata", monospace;
+  --font-maven: "Maven Pro", sans-serif;
+
+  /* Intro */
+  --text-info: #878EA1;
+  --text-subtitle: #C0C4CE;
+  --text-info-my-name: #E3646E;
+  --text-lg-title: #E2E4E9;
+  --text-description: #878EA1;
+
+  /* Project */
+  --text-project-my-work: #E3646E;
+  --text-md-project: #E2E4E9;
+  --project-grid-projectCard1-title: #E2E4E9;
+  --project-grid-projectCard-description: #C0C4CE;
+
+  /* Services */
+  --services-subtitle: #E3646E;
+  --services-description: #E2E4E9;
+
+  --services-grid-card-title: #E2E4E9;
+  --services-grid-card-subtitle: #C0C4CE;
+
+  /* Contact */
+  --contact-text-subtitle: #BB72E9;
+  --contact-text-ask: #E2E4E9;
+  --contact-text-direction: #C0C4CE;
+
+  /* Links */
+  --links-text: #C0C4CE;
+
+  --title-lg: 800 56px/120% var(--font-family);
+  --title-md: 800 24px/120% var(--font-family);
+  --title-sm: 800 16px/120% var(--font-family);
+  --subtitle: 400 20px/120% var(--font-family);
+  --text-md: 400 16px/140% var(--font-family);
+  --text-sm: 400 14px/140% var(--font-family);
+}
+
+body {}
