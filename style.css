@@ -1,0 +1,214 @@
+﻿@import url(global.css);
+
+.main {
+  width: 100%;
+  max-width: 680px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    height: 40px;
+
+    .title {
+      font-family: var(--font-logo);
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  .buttonBack {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+
+    img {
+      height: 16px;
+      width: auto;
+      filter: invert(34%) sepia(60%) saturate(800%) hue-rotate(290deg) brightness(90%);
+    }
+
+    a {
+      color: var(--color-brand);
+      font: var(--link);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .titlePage {
+    width: 100%;
+
+    p {
+      color: var(--content-primary);
+      font: var(--title);
+    }
+  }
+
+  .addItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+
+    input {
+      flex: 1;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--border-primary);
+      padding: 0 18px;
+      outline: none;
+      font: var(--paragraph);
+    }
+
+    input.error {
+      border: 1px solid var(--color-danger);
+    }
+
+    button {
+      width: 160px;
+      height: 44px;
+      border-radius: 12px;
+      border: none;
+      font: var(--label);
+      color: var(--always-white);
+      background-color: var(--color-brand);
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
+  #listContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid var(--border-primary);
+    padding: 12px;
+
+    input[type="checkbox"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--border-primary);
+      border-radius: 4px;
+      background-color: #FFFFFF;
+      cursor: pointer;
+      flex-shrink: 0;
+
+      &:checked {
+        background-color: var(--color-brand);
+        border-color: var(--color-brand);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l3 3 5-6' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    input[type="checkbox"]:checked ~ label {
+      text-decoration: line-through;
+      color: var(--content-tertiary);
+    }
+
+    label {
+      flex: 1;
+      font: var(--paragraph);
+      color: var(--content-primary);
+      cursor: pointer;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      min-width: 0;
+    }
+
+    .removeButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 8px;
+      background-color: #F1F1FA;
+      cursor: pointer;
+      color: var(--content-primary);
+      flex-shrink: 0;
+    }
+  }
+
+  .alert {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--color-danger);
+    color: var(--always-white);
+
+    svg.warning-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .content {
+      flex: 1;
+
+      p {
+        font: var(--paragraph);
+        color: var(--always-white);
+      }
+    }
+
+    .delete-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      color: var(--always-white);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.main .buttonBack a:hover {
+  color: var(--color-brand-hover);
+}
+
+.main .addItem button:hover {
+  background-color: var(--color-brand-hover);
+}
+
+@media (max-width: 480px) {
+  .main .addItem {
+    flex-direction: column;
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
