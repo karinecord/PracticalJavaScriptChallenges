@@ -2,6 +2,10 @@
 
 Formulário de matrícula para a escola de educação infantil **Estrelas do Amanhã**, desenvolvido como projeto prático de HTML e CSS.
 
+## Protótipo
+
+[Visualizar no Figma](https://www.figma.com/proto/uslu3ZoIQ0i6T1bHEtXVDS/Formul%C3%A1rio-de-matr%C3%ADcula--Community-?node-id=3-811&p=f&t=IqeZX4IagO5ASMLj-1&scaling=min-zoom&content-scaling=fixed&page-id=3%3A376)
+
 ## Sobre o projeto
 
 Interface de cadastro que permite matricular uma criança na escola, preenchendo informações pessoais, endereço, dados do responsável e opções de matrícula (turno e esporte).
