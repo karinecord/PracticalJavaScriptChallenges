@@ -1,0 +1,9 @@
+input {
+  appearance: none;
+  color: var(--input-base);
+}
+
+label {
+  color: var(--text-body);
+  font: var(--font-body-sm-semibold);
+}
